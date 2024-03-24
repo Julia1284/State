@@ -1,19 +1,22 @@
 package ru.yulialyapushkina.state.model.entities;
 
+import ru.yulialyapushkina.state.model.service.RandService;
 import ru.yulialyapushkina.state.model.storage.State;
 
 public class Citizen {
+
+
     private String firstName;
     private String lastName;
     private int age;
     private State state;
     private static int id=1;
 
-    public Citizen(String firstName, String lastName, int age, State state) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.state = state;
+    public Citizen() {
+        this.firstName = RandService.generateName();
+        this.lastName = RandService.generateSurname();
+        this.age = RandService.generateAge();
+        this.state = State.getInstance("Россия");
         id++;
     }
 

@@ -1,9 +1,11 @@
 package ru.yulialyapushkina.state._main;
 
+import ru.yulialyapushkina.state.model.entities.Citizen;
 import ru.yulialyapushkina.state.model.entities.City;
 import ru.yulialyapushkina.state.model.entities.District;
 import ru.yulialyapushkina.state.model.entities.Region;
 
+import java.util.Arrays;
 import java.util.concurrent.Callable;
 
 public class _Main {
@@ -40,6 +42,7 @@ public class _Main {
         City city9 = new City("Павшино");
         City [] citiesDistrict4 = {city7, city8, city9};
 
-
+        Citizen [] citizens = {new Citizen(), new Citizen(), new Citizen()};
+        System.out.println(Arrays.toString(citizens));
     }
 }
